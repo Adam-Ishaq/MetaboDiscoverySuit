@@ -10,35 +10,35 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 
 # 🚀 Key Capabilities
 
-**Complete Data Pipeline:** Process raw mzML files through peak detection, alignment, and feature extraction with optimized algorithms for high-throughput analysis.
+- **Complete Data Pipeline:** Process raw mzML files through peak detection, alignment, and feature extraction with optimized algorithms for high-throughput analysis.
 
-**Advanced Statistics:** Perform univariate tests, PCA, PLS-DA, and multivariate analyses with automated multiple testing correction and comprehensive quality control.
+- **Advanced Statistics:** Perform univariate tests, PCA, PLS-DA, and multivariate analyses with automated multiple testing correction and comprehensive quality control.
 
-**AI-Powered Discovery:** Leverage ensemble machine learning models that combine multiple algorithms to identify robust biomarkers, validated through rigorous cross-validation and performance metrics.
+- **AI-Powered Discovery:** Leverage ensemble machine learning models that combine multiple algorithms to identify robust biomarkers, validated through rigorous cross-validation and performance metrics.
 
-**Metabolite Identification:** Integrate with major databases (HMDB, METLIN, KEGG) for confident metabolite annotation and pathway enrichment analysis.
+- **Metabolite Identification:** Integrate with major databases (HMDB, METLIN, KEGG) for confident metabolite annotation and pathway enrichment analysis.
 
-**Explainable Results:** Understand model decisions through SHAP values and feature importance rankings, making AI predictions transparent and scientifically interpretable.
+- **Explainable Results:** Understand model decisions through SHAP values and feature importance rankings, making AI predictions transparent and scientifically interpretable.
 
 <img width="100" height="100" alt="image-removebg-preview" src="https://github.com/user-attachments/assets/8b64dcd6-f532-49d4-97fd-ad89090d3ee1" /> **AI & Machine Learning**
 
-**Ensemble Learning:** Advanced ensemble methods with Bayesian hyperparameter optimization
+- **Ensemble Learning:** Advanced ensemble methods with Bayesian hyperparameter optimization
 
-**Deep Learning:** Custom neural architectures (autoencoders, VAEs, transformers)
+- **Deep Learning:** Custom neural architectures (autoencoders, VAEs, transformers)
 
-**Feature Engineering:** Automated feature selection with ensemble voting
+- **Feature Engineering:** Automated feature selection with ensemble voting
 
-**Model Interpretation:** SHAP-based explainability and feature importance analysis
+- **Model Interpretation:** SHAP-based explainability and feature importance analysis
 
-**Neural Networks for MetaboDiscoverySuit**
+ **Neural Networks for MetaboDiscoverySuit**
 
-**Autoencoder Networks:** For dimensionality reduction and anomaly detection
+- **Autoencoder Networks:** For dimensionality reduction and anomaly detection
 
-**Variational Autoencoders:** For probabilistic modeling with uncertainty quantification
+- **Variational Autoencoders:** For probabilistic modeling with uncertainty quantification
 
-**Graph Neural Networks:** For metabolic network analysis
+- **Graph Neural Networks:** For metabolic network analysis
 
-**Transformer Models:** For sequence and time-series metabolomics data
+- **Transformer Models:** For sequence and time-series metabolomics data
 
 🆕 **Kolmogorov-Arnold Networks (KANs):** Interpretable networks with learnable activation functions
 
@@ -50,24 +50,24 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 
 **System Requirements**
 
-**Minimum Requirements**
+- **Minimum Requirements**
 
-**Operating System:** Windows 10/11, macOS 10.15+, or Linux (Ubuntu 20.04+)
+- **Operating System:** Windows 10/11, macOS 10.15+, or Linux (Ubuntu 20.04+)
 
-**Python:** 3.9 or higher 
+- **Python:** 3.9 or higher 
 
-**RAM:** 8 GB minimum
+- **RAM:** 8 GB minimum
 
-**Storage:** 10 GB free space (more for large datasets)
+- **Storage:** 10 GB free space (more for large datasets)
 
-**Processor:** Multi-core processor (4+ cores recommended)
+- **Processor:** Multi-core processor (4+ cores recommended)
 
 **Recommended Requirements**
 
-**RAM:** 16 GB or more (32 GB for large datasets >1000 samples)
+- **RAM:** 16 GB or more (32 GB for large datasets >1000 samples)
 
-**Storage:** 50 GB+ SSD for better I/O performance
+- **Storage:** 50 GB+ SSD for better I/O performance
 
-**Processor:** 8+ cores for parallel processing
+- **Processor:** 8+ cores for parallel processing
 
-**GPU:** NVIDIA GPU with CUDA support (optional, for deep learning acceleration)
+- **GPU:** NVIDIA GPU with CUDA support (optional, for deep learning acceleration)
