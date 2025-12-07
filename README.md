@@ -110,3 +110,9 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 
 - **GPU:** NVIDIA GPU with CUDA support (optional, for deep learning acceleration)
 
+## 🛠️ **Installation**
+
+``` bash
+Step 1: Clone the Repository
+bashgit clone https://github.com/yourusername/metabolomics-ai-biomarker-discovery.git
+cd metabolomics-ai-biomarker-discovery
