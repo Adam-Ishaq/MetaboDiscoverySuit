@@ -116,3 +116,13 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 Step 1: Clone the Repository
 bashgit clone https://github.com/yourusername/metabolomics-ai-biomarker-discovery.git
 cd metabolomics-ai-biomarker-discovery
+
+## **Step 2: Create Virtual Environment**
+```bash
+# Using venv
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Or using conda
+conda create -n metabolomics python=3.9
+conda activate metabolomics
