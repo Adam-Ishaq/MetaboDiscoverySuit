@@ -30,6 +30,20 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 
 - **Model Interpretation:** SHAP-based explainability and feature importance analysis
 
+- ✅ Random Forest with feature importance
+
+- ✅ XGBoost/LightGBM gradient boosting
+
+- ✅ Deep Neural Networks
+
+- ✅ Autoencoders for feature extraction
+
+- ✅ Ensemble methods
+
+- ✅ SHAP values for explainable AI
+
+- ✅ Cross-validation and model validation
+
  **Neural Networks for MetaboDiscoverySuit**
 
 - **Autoencoder Networks:** For dimensionality reduction and anomaly detection
@@ -45,6 +59,30 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 🆕 **Variational KANs:** Probabilistic KANs with uncertainty quantification
 
 🆕 **Hybrid KANs:** Combining KAN feature extraction with traditional classifiers
+
+**Metabolite Identification**
+
+- ✅ Database integration (HMDB, METLIN)
+  
+- ✅ m/z matching with mass tolerance
+
+- ✅ Adduct and isotope pattern consideration
+
+- ✅ Confidence scoring
+
+**Visualization**
+
+- ✅ PCA/PLS-DA score plots
+
+- ✅ Heatmaps with hierarchical clustering
+
+- ✅ Volcano plots
+
+- ✅ ROC curves
+
+- ✅ Feature importance plots
+
+- ✅ SHAP summary plots
 
 **Installation Requirements - MetaboDiscoverySuit**
 
@@ -71,3 +109,4 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 - **Processor:** 8+ cores for parallel processing
 
 - **GPU:** NVIDIA GPU with CUDA support (optional, for deep learning acceleration)
+
