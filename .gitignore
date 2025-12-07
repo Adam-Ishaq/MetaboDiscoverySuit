@@ -1,0 +1,371 @@
+# MetaboAI - .gitignore
+
+# ============================================================================
+# Python
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ============================================================================
+# Mass Spectrometry Data Files (LARGE FILES!)
+# ============================================================================
+# Raw data files - TOO LARGE for GitHub
+*.mzML
+*.mzXML
+*.raw
+*.RAW
+*.wiff
+*.d/
+*.mzData
+*.mzML.gz
+*.mzXML.gz
+
+# Processed data files (unless specifically needed)
+*.mgf
+*.ms2
+*.pkl
+*.pickle
+
+# ============================================================================
+# Data Directories (contain large datasets)
+# ============================================================================
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Keep example/test data (small files only)
+!data/raw/example_*.mzML
+!data/processed/example_*.csv
+
+# Databases (usually large)
+data/databases/*
+!data/databases/.gitkeep
+!data/databases/README.md
+
+# ============================================================================
+# Results and Output Files
+# ============================================================================
+results/
+outputs/
+figures/
+plots/
+reports/*.pdf
+reports/*.html
+!reports/example_report.html
+
+# ============================================================================
+# Logs and Cache
+# ============================================================================
+logs/
+*.log
+cache/
+.cache/
+tmp/
+temp/
+
+# ============================================================================
+# Model Files (can be large)
+# ============================================================================
+# Trained models
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+*.pb
+models/saved_models/*
+!models/.gitkeep
+
+# Model checkpoints
+checkpoints/
+
+# ============================================================================
+# IDE and Editor Files
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*~
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Project-Specific Files
+# ============================================================================
+# Configuration files with sensitive info
+config_local.yaml
+secrets.yaml
+.env.local
+
+# Metadata files (may contain sensitive patient info)
+data/metadata/*_private.csv
+data/metadata/*_confidential.xlsx
+
+# Large intermediate files
+*.npy
+*.npz
+*.feather
+*.parquet
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Compressed files (unless specifically needed)
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# ============================================================================
+# Jupyter Notebook Outputs
+# ============================================================================
+# Don't commit notebook outputs (can be regenerated)
+notebooks/*/*.ipynb
+!notebooks/*/*.ipynb
+# Keep notebooks but clear outputs before committing
+
+# ============================================================================
+# Docker
+# ============================================================================
+*.log
+docker-compose.override.yml
+
+# ============================================================================
+# Testing
+# ============================================================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ============================================================================
+# Documentation
+# ============================================================================
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# ============================================================================
+# Temporary Analysis Files
+# ============================================================================
+scratch/
+experiments/
+exploratory/
+debug/
+
+# ============================================================================
+# Package Manager
+# ============================================================================
+# Conda
+*.conda
+*.tar.bz2
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================================================
+# Keep These Empty Directories
+# ============================================================================
+# Create .gitkeep files in empty directories you want to track
+!**/.gitkeep
+
+# ============================================================================
+# Exceptions - Files to ALWAYS Include
+# ============================================================================
+# Include small example/test data
+!data/raw/test_sample.mzML
+!data/raw/example_data.csv
+
+# Include important documentation
+!docs/*.md
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+
+# Include configuration templates
+!config.yaml.template
+!config.example.yaml
