@@ -113,7 +113,7 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 ## 🛠️ **Installation**
 
 ``` bash
-Step 1: Clone the Repository
+#Clone the Repository
 bashgit clone https://github.com/yourusername/metabolomics-ai-biomarker-discovery.git
 cd metabolomics-ai-biomarker-discovery
 
@@ -124,3 +124,18 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Or using conda
 conda create -n metabolomics python=3.9
 conda activate metabolomics
+```
+
+## **Install Dependencies**
+
+``` bash
+pip install -r requirements.txt
+```
+
+## **Set Up Configuration**
+
+```bash
+# Copy and edit configuration file
+cp config.yaml config_local.yaml
+# Edit config_local.yaml with your specific settings
+```
