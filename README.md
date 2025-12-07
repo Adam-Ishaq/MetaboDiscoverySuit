@@ -114,8 +114,8 @@ Unlike traditional metabolomics platforms that rely solely on classical statisti
 
 ``` bash
 #Clone the Repository
-bashgit clone https://github.com/yourusername/metabolomics-ai-biomarker-discovery.git
-cd metabolomics-ai-biomarker-discovery
+bashgit clone https://github.com/Adam-Ishaq/MetaboDiscoverySuit.git
+cd MetaboDiscoverySuit
 
 # Using venv
 python -m venv venv
