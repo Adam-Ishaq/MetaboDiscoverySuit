@@ -1,0 +1,16 @@
+﻿sample_id,group,sample_type,batch,filename,notes
+Naive_007,Naive,biological,1,Naive_007.mzML,Control/Healthy group
+Naive_027,Naive,biological,1,Naive_027.mzML,Control/Healthy group
+Naive_071,Naive,biological,1,Naive_071.mzML,Control/Healthy group
+Naive_109,Naive,biological,1,Naive_109.mzML,Control/Healthy group
+Naive_127,Naive,biological,1,Naive_127.mzML,Control/Healthy group
+Naive_139,Naive,biological,1,Naive_139.mzML,Control/Healthy group
+Semi_025,Semi,biological,1,Semi_025.mzML,Semi group - possibly infected/semi-immune
+Semi_045,Semi,biological,1,"Semi_045,mzML",Semi group - possibly infected/semi-immune
+Semi_061,Semi,biological,1,Semi_061.mzML,Semi group - possibly infected/semi-immune
+Semi_091,Semi,biological,1,Semi_091.mzML,Semi group - possibly infected/semi-immune
+Semi_143,Semi,biological,1,Semi_143.mzML,Semi group - possibly infected/semi-immune
+Semi_157,Semi,biological,1,Semi_157.mzML,Semi group - possibly infected/semi-immune
+QC_001,QC,biological,1,QC_001.mzML,Quality control - pooled sample
+QC_003,QC,biological,1,QC_003.mzML,Quality control - pooled sample
+QC_005,QC,biological,1,QC_005.mzML,Quality control - pooled sample
