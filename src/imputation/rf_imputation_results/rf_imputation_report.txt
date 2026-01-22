@@ -1,0 +1,43 @@
+======================================================================
+RANDOM FOREST IMPUTATION ANALYSIS REPORT
+======================================================================
+
+Algorithm: Iterative Random Forest Imputation
+
+Dataset Information:
+  Total features: 241
+  Total samples: 146
+  Biological groups: ['LC', 'NC', 'PTB', 'QC']
+
+Convergence Information:
+  LC:
+    Iterations to convergence: 5
+    Initial error: 18950.42
+    Final error: 195.08
+    Error reduction: 18755.34 (99.0%)
+  NC:
+    Iterations to convergence: 5
+    Initial error: 2112.04
+    Final error: 0.00
+    Error reduction: 2112.04 (100.0%)
+  PTB:
+    Iterations to convergence: 10
+    Initial error: 44995.50
+    Final error: 63.74
+    Error reduction: 44931.76 (99.9%)
+  QC:
+    Iterations to convergence: 4
+    Initial error: 2340.47
+    Final error: 0.00
+    Error reduction: 2340.47 (100.0%)
+
+Validation Results (Cross-validation):
+  RMSE: 328045.3328 +/- 59653.7424
+  MAE:  58047.7835 +/- 4777.3597
+  R2:   0.9813 +/- 0.0036
+  Correlation: 0.9909 +/- 0.0019
+
+Interpretation:
+  Excellent imputation quality (R2=0.981, Corr=0.991)
+
+======================================================================

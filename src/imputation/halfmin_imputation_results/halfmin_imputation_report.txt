@@ -1,0 +1,37 @@
+======================================================================
+HALF-MINIMUM IMPUTATION ANALYSIS REPORT
+======================================================================
+
+Algorithm: Half-Minimum (Domain-Specific Baseline)
+
+Method Description:
+  - Assumes missing values are below detection limit
+  - Imputes with 50% of minimum detected value per feature
+  - Simple, fast, domain-specific approach
+
+Dataset Information:
+  Total features: 241
+  Total samples: 146
+  Biological groups: ['LC', 'NC', 'PTB', 'QC']
+
+Validation Results (Cross-validation):
+  RMSE: 1545362.7703 +/- 98727.0882
+  MAE:  300973.4942 +/- 14847.1202
+  R2:   0.4764 +/- 0.0155
+  Correlation: 0.8974 +/- 0.0227
+
+Interpretation:
+  Imputation quality needs review (R2=0.476, Corr=0.897)
+
+Note:
+  Half-minimum is a simple baseline approach.
+  It does not account for:
+    - Sample similarity (unlike KNN)
+    - Correlation structure (unlike EM/SVD)
+    - Non-linear relationships (unlike RF)
+  However, it is:
+    - Fast and computationally efficient
+    - Domain-specific for metabolomics
+    - Conservative (doesn't overestimate low values)
+
+======================================================================

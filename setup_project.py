@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MetaboAI - Project Setup Script
+EM vs Knn - Project Setup Script
 Creates the complete directory structure and necessary files for the project.
 """
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 def create_directory_structure():
-    """Create all necessary directories for the MetaboAI project."""
+    """Create all necessary directories for the EM vs Knn project."""
     
     # Define directory structure
     directories = [
@@ -57,7 +57,7 @@ def create_directory_structure():
     ]
     
     print("=" * 70)
-    print("MetaboAI Project Setup")
+    print("EM vs Knn Project Setup")
     print("=" * 70)
     print()
     
@@ -91,13 +91,27 @@ def create_gitkeep_files(directories):
     
     # Directories that should have .gitkeep
     gitkeep_dirs = [
+         # Data directories
         "data/raw",
         "data/processed",
         "data/metadata",
         "data/databases",
+        
+        # Source code directories
+        "src/data_processing",
+        "src/preprocessing",
+        "src/statistical_analysis",
+        "src/ml_models",
+        "src/visualization",
+        "src/metabolite_identification",
+        "src/pathway_analysis",
+        "src/utils",
+        
+         # Results directories
         "results/figures",
         "results/tables",
         "results/reports",
+       
         "logs",
         "cache",
         "models",

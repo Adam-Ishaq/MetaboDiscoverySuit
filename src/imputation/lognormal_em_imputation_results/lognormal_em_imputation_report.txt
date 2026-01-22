@@ -1,0 +1,53 @@
+======================================================================
+LOG-NORMAL EM IMPUTATION ANALYSIS REPORT
+======================================================================
+
+Algorithm: Log-Normal EM (Distribution-Aware)
+
+Key Innovation:
+  - Log-transform data before EM
+  - Apply Gaussian EM on log-scale
+  - Back-transform to original scale
+  - Respects log-normal distribution of metabolomics data
+
+Dataset Information:
+  Total features: 241
+  Total samples: 146
+  Biological groups: ['LC', 'NC', 'PTB', 'QC']
+
+Convergence Information:
+  LC:
+    Iterations: 100
+    Initial LL: -20852.12
+    Final LL: 26358.44
+    LL improvement: 47210.56
+    Log offset used: 0.2350
+  NC:
+    Iterations: 100
+    Initial LL: -8879.82
+    Final LL: 22096.82
+    LL improvement: 30976.65
+    Log offset used: 1.8344
+  PTB:
+    Iterations: 100
+    Initial LL: -14143.89
+    Final LL: 14645.65
+    LL improvement: 28789.54
+    Log offset used: 0.0081
+  QC:
+    Iterations: 6
+    Initial LL: 10104.75
+    Final LL: 20397.00
+    LL improvement: 10292.24
+    Log offset used: 106.5652
+
+Validation Results:
+  RMSE: 407214.5777 +/- 79103.3549
+  MAE:  67398.2156 +/- 3570.8430
+  R2:   0.9704 +/- 0.0118
+  Corr: 0.9861 +/- 0.0049
+
+Interpretation:
+  Excellent (R2=0.970, Corr=0.986)
+
+======================================================================

@@ -170,6 +170,11 @@ data/databases/*
 # ============================================================================
 results/*
 !results/**/.gitkeep
+results/processed/*
+!results/processed/.gitkeep
+!results/processed/individual_features/
+results/processed/individual_features/*
+!results/processed/individual_features/*.csv
 outputs/
 figures/
 plots/

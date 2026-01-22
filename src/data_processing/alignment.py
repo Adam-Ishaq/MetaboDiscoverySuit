@@ -110,9 +110,10 @@ class FeatureAligner:
         
         return len(feature_files)
     
-    def _cluster_features_hierarchical(self, features_df: pd.DataFrame) -> pd.DataFrame:
+    def _cluster_features_grid_based(self, features_df: pd.DataFrame) -> pd.DataFrame:
         """
-        Cluster features using hierarchical clustering.
+        Cluster features using fast grid-based binning.
+        Much faster than hierarchical clustering for large datasets.
         
         Args:
             features_df (DataFrame): DataFrame with m/z and rt columns
@@ -123,31 +124,27 @@ class FeatureAligner:
         if len(features_df) == 0:
             return features_df
         
-        # Normalize m/z and RT for clustering
-        mz_normalized = features_df['mz'].values / self.mz_tolerance
-        rt_normalized = features_df['rt'].values / self.rt_tolerance
+        # Create bins for m/z and RT
+        mz_bins = np.arange(
+            features_df['mz'].min() - self.mz_tolerance,
+            features_df['mz'].max() + self.mz_tolerance,
+            self.mz_tolerance
+        )
         
-        # Stack for clustering
-        X = np.column_stack([mz_normalized, rt_normalized])
+        rt_bins = np.arange(
+            features_df['rt'].min() - self.rt_tolerance,
+            features_df['rt'].max() + self.rt_tolerance,
+            self.rt_tolerance
+        )
         
-        if len(X) < 2:
-            features_df['cluster_id'] = 0
-            return features_df
+        # Assign features to bins
+        mz_bin_idx = np.digitize(features_df['mz'].values, mz_bins)
+        rt_bin_idx = np.digitize(features_df['rt'].values, rt_bins)
         
-        # Hierarchical clustering
-        try:
-            distances = pdist(X, metric='euclidean')
-            linkage_matrix = linkage(distances, method='average')
-            
-            # Cut tree at distance = 1 (features within tolerance)
-            clusters = fcluster(linkage_matrix, t=1.0, criterion='distance')
-            
-            features_df['cluster_id'] = clusters
-            
-        except Exception as e:
-            logger.warning(f"Clustering failed: {e}. Using simple grouping.")
-            # Fallback: simple binning
-            features_df['cluster_id'] = range(len(features_df))
+        # Create cluster ID from bin combination
+        features_df['cluster_id'] = mz_bin_idx * 100000 + rt_bin_idx
+        
+        logger.info(f"  Grid-based clustering: {features_df['cluster_id'].nunique()} bins created")
         
         return features_df
     
@@ -197,7 +194,7 @@ class FeatureAligner:
         
         # Step 2: Cluster features
         logger.info("Step 2: Clustering features...")
-        combined_features = self._cluster_features_hierarchical(combined_features)
+        combined_features = self._cluster_features_grid_based(combined_features)
         
         n_clusters = combined_features['cluster_id'].nunique()
         logger.info(f"  Found {n_clusters:,} feature clusters")
@@ -244,8 +241,18 @@ class FeatureAligner:
         
         self.aligned_features = pd.DataFrame(aligned_features)
         
+        if len(self.aligned_features) == 0:
+            logger.warning("No features passed the min_fraction filter!")
+            logger.warning(f"Try lowering min_fraction (current: {self.min_fraction})")
+            return self.aligned_features
+        
         logger.info(f"  Created {len(self.aligned_features):,} aligned features")
-        logger.info(f"  Features per sample: {self.aligned_features[self.sample_ids].astype(bool).sum().mean():.0f}")
+        
+        # Calculate features per sample (safely)
+        intensity_cols = [col for col in self.aligned_features.columns if col in self.sample_ids]
+        if intensity_cols:
+            avg_features = self.aligned_features[intensity_cols].astype(bool).sum().mean()
+            logger.info(f"  Features per sample: {avg_features:.0f}")
         
         return self.aligned_features
     

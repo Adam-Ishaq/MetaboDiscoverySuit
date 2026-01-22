@@ -175,7 +175,7 @@ def main():
     
     print()
     print("╔════════════════════════════════════════════════════════════════════╗")
-    print("║            Feature Alignment - Malaria Dataset                    ║")
+    print("║            Feature Alignment - Malaria Dataset                     ║")
     print("╚════════════════════════════════════════════════════════════════════╝")
     print()
     
@@ -186,7 +186,7 @@ def main():
         'output_dir': "results/aligned",
         'mz_tolerance': 0.01,      # 0.01 Da
         'rt_tolerance': 30.0,      # 30 seconds
-        'min_fraction': 0.3,       # Feature must be in ≥30% of samples
+        'min_fraction': 0.2,       # Feature must be in ≥20% of samples (more permissive!)
     }
     
     print("Configuration:")
